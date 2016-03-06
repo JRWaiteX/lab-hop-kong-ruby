@@ -6,7 +6,7 @@ class CreateVendors < ActiveRecord::Migration
       t.string :street,     null: false
       t.string :locality,   null: false
       t.string :area,       null: false
-      t.string :type,       null: false
+      t.string :vendor_type,       null: false
       t.string :phone
       t.string :email
       t.string :website
