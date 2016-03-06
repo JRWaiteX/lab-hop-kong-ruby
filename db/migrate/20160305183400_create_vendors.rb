@@ -14,7 +14,7 @@ class CreateVendors < ActiveRecord::Migration
       t.string :twitter
       t.string :instagram
 
-      t.timestamps null: false
+      t.timestamps          null: false
     end
   end
 end
