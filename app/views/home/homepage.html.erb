@@ -1,0 +1,23 @@
+<h1>Hop Kong Homepage</h1>
+
+<div class="container-fluid">
+
+  <div id="home-hopkong">
+
+    <h3>HOP KONG<br>
+    Where to find craft beer in Hong Kong</h3>
+
+    <div class="vendor-home-row">
+
+      <% @vendors.each do |elem| %>
+<!--    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> -->
+          <div class="thumbnail">
+          <% elem.each do |vendor| %>
+            <a href="<%= vendor_path(vendor) %>"><img src=<%= vendor.image_url %> alt="<%= vendor.name %>"></a>
+          <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

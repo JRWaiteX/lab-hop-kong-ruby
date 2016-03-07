@@ -1,8 +1,15 @@
 class HomeController < ApplicationController
 
-  ## This is a controller action called Home
-  def home
-    render text: "hello from Rails! This is Home..."
+   def homepage
+    @vendors = []
+    all_vendors = Vendor.all
+    all_vendors.each_with_index do |vendor, i|
+      if i % 3 == 0
+        @vendors << [vendor]
+      else
+        @vendors[i/3] << vendor
+      end
+    end
   end
 
 end

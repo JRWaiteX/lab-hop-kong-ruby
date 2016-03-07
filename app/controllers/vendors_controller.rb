@@ -1,8 +1,14 @@
 class VendorsController < ApplicationController
 
-  ## This is a controller action called Vendors
-  def vendors
-    render text: "hello from Rails! This is Vendors..."
+  def index
+    @vendors = Vendor.all
+  end
+
+
+# GET /vendors/1
+  # GET /vendors/1.json
+  def show
+    @vendor = Vendor.find(params[:id])
   end
 
 end
