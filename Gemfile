@@ -43,7 +43,10 @@ group :development, :test do
   gem 'spring'
 end
 
-gem "twitter-bootstrap-rails"
-gem "font-awesome-rails"
+gem 'twitter-bootstrap-rails'
+gem 'font-awesome-rails'
+gem 'bower'
+gem 'devise_token_auth'
+gem 'omniauth'
 # gem 'momentjs-rails'  -- not needed for this project
 

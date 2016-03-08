@@ -1,1 +1,17 @@
-xx
+<div id="bookmarks-page">
+  <h2></h2>
+</div>
+
+<div id="images" class="container-fluid">
+  <div class="row">
+    <% bookmarks.forEach(function (bookmark) { %>
+      <div class="thumb col-md-3 col-sm-6 col-xs-12">
+        <div class="thumbnail" href="/vendors/<%= bookmark.vendor._id %>">
+          <img class="img-responsive img-rounded" src="<%= bookmark.vendor.image %>"   alt="<%= bookmark.vendor.name %>">
+        </div>
+          <button class="delete-bookmark-btn btn-centered btn-lg btn-responsive btn-danger" data-id="<%= bookmark._id%>">Delete
+          </button>
+      </div>
+    <% }) %>
+  </div>
+</div>
